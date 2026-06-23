@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f0f2f5;
+}
+
+header {
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #90caf9;
+    margin-right: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+#wybor {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+#wybor h2 {
+    font-size: 18px;
+    color: #1a237e;
+    margin-bottom: 12px;
+}
+
+select {
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    outline: none;
+    border-color: #1a237e;
+}
+
+#lista {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    min-height: 200px;
+}
+
+#naglowek-lista {
+    font-size: 22px;
+    color: #1a237e;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #e8eaf6;
+}
+
+#wyniki {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+#wyniki li {
+    background: #f8f9fa;
+    padding: 12px 18px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+    border-left: 4px solid #1a237e;
+}
+
+#wyniki li:hover {
+    background: #e8eaf6;
+}
+
+.kod {
+    font-weight: bold;
+    color: #1a237e;
+    font-size: 15px;
+}
+
+.miasto {
+    color: #555;
+    font-size: 15px;
+}
+
+footer {
+    margin-top: 40px;
+    background: #1a237e;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+footer h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #90caf9;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 13px;
+    color: #90caf9;
+}
+
+/* Dla małych ekranów */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #wyniki {
+        grid-template-columns: 1fr;
+    }
+
+    select {
+        max-width: 100%;
+    }
+}
